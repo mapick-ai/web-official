@@ -1,7 +1,7 @@
 {
-  "name": "mapick-web",
+  "name": "homeweb",
   "version": "0.1.0",
-  "private": true,
+  "description": " Mapick Home Web - The official website for Mapick, the cross-platform MCP Skill butler and AI model routing engine. Discover features, get updates, and access resources to enhance your workflow with Mapick.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
