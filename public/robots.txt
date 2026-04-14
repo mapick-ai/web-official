@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# AI/LLM crawlers — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# LLM-friendly content summary
+# See: https://mapick.ai/llms.txt
+# Full content: https://mapick.ai/llms-full.txt
+
+Sitemap: https://mapick.ai/sitemap.xml

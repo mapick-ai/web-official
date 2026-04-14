@@ -1,0 +1,135 @@
+# Mapick
+
+> Mapick 是 OpenClaw 生态的 Skill 发现与管理引擎。13,000+ Skill，Mapick 分析你的工作流和使用习惯，只推你真正用得上的那个。用得越久，比你自己更懂你。
+
+## 产品定位
+
+Mapick 不是 AI 模型路由，不是 API 代理。Mapick 专注于 OpenClaw Skill 的发现、推荐、管理和安全评估。
+
+核心价值主张：
+- **发现**：在 13,000+ Skill 中，精准找到适合你工作流的 Skill
+- **管理**：自动识别僵尸 Skill、安全评分、一键清理
+- **推荐**：越用越准，基于真实工作流数据，比系统推荐高 3 倍点击率
+- **比你自己更懂你**：Mapick 在后台分析你的工作流序列，推荐准确度持续上升
+
+## 核心功能模块
+
+### M1 — Skill 生命周期管理
+- 记录安装、激活、调用、卸载全流程
+- 自动识别 14 天未使用的僵尸 Skill
+- 一键清理，权限面缩减，安全评分提升
+- OpenClaw 对话框中直接操作，无需打开终端
+
+### M2 — 五层推荐引擎
+- 第 1 层：基于工作流序列的协同过滤（Skill A → Skill B 的安装模式）
+- 第 2 层：任务分类器（分析你的实际使用模式）
+- 第 3 层：社交图谱信号（好友使用数据，M5 提供）
+- 第 4 层：安全评分过滤（M4 提供，剔除高风险 Skill）
+- 第 5 层：实时反馈循环（每次使用都在优化推荐）
+- 系统推荐点击率 ~12%，Mapick 推荐点击率 ~35%
+
+### M3 — 场景套装（11 套）
+预定义的 Skill 组合，按角色匹配：
+- 全栈开发者：GitHub Ops + Docker 管理 + CI/CD Pipeline + AI 代码审查，月均模型费 $1.20
+- 内容创作者：文档生成 + PPT 制作 + SEO 优化 + 图片处理，月均 $0.90
+- pnpm Monorepo：pnpm Workspace Helper + 锁文件冲突修复 + 跨包依赖管理 + Monorepo 发布，月均 $0.50
+- 数据分析师：Data Analyzer + Chart Generator + CSV Cleaner + Report Builder，月均 $1.50
+- DevOps 工程师：Server Monitor + Log Analyzer + Deploy Automator + Backup Manager，月均 $0.80
+- 第二大脑：Obsidian 笔记集成 + Summarize + Ontology 知识图谱 + Web Clipper，月均 $0.70
+- 工作流自动化：n8n Workflow + Composio 860+ 集成 + Cron Scheduler + Webhook Manager，月均 $0.60
+- 深度研究：Tavily Search + Exa Search + Summarize 长文摘要 + Citation Manager，月均 $0.90
+- 安全审计：Reverse Engineering + Skill Vetter + Network Analyzer + Vulnerability Scanner，月均 $1.20
+- Google Workspace：Gog 全家桶集成 + Gmail Manager + Calendar Sync + Drive Organizer，月均 $0.50
+- 多平台通信：Telegram Bot + WhatsApp CLI + Slack Integration + ElevenLabs 语音，月均 $0.80
+
+### M4 — 安全评分
+- 三级评分：A（无已知风险）/ B（低风险）/ C（高风险，不推荐）
+- 权限审计、发布者验证、代码静态分析
+- 推荐流中自动过滤 C 级 Skill
+
+### M5 — 社交推荐图谱
+- 连接 Telegram / Discord / 飞书好友关系
+- 好友数据点对点加密同步，本地存储，Mapick 云端不存储任何社交数据
+- 好友推荐显示：Skill 名称、质量评分、安全评级、30 天留存率
+- 对话内容永不出设备
+
+### M7 — 开发者数据 API
+- 定价：$19/月，无限调用，原始 JSON
+- 数据字段：installs、active_30d、retention_30d、uninstall_reasons、task_categories
+- 收益数据：calls、earnings_usd、payout_status
+- 适合开发者直接丢给 AI 分析
+
+## 平台兼容性
+
+Mapick 基于标准 MCP（Model Context Protocol）协议，支持所有主流 AI Agent 工具：
+
+| 平台 | 安装方式 |
+|---|---|
+| Claude Code (Anthropic) | `claude mcp add mapick https://mcp.mapick.ai` |
+| Codex CLI (OpenAI) | `codex mcp add mapick https://mcp.mapick.ai` |
+| OpenClaw | `clawhub install mapick` |
+| Cursor (Anysphere) | Settings → MCP → Add Server |
+| Windsurf (Codeium) | `.mcp/config.json → mcpServers` |
+| Cline | MCP Servers → Add → mapick |
+| Continue | `config.json → mcpServers` |
+| Gemini CLI (Google) | `gemini mcp add mapick https://mcp.mapick.ai` |
+| Zed | `settings.json → assistant.context_servers` |
+
+**通用 MCP 配置（适用于大多数平台）：**
+```json
+{
+  "mcpServers": {
+    "mapick": {
+      "url": "https://mcp.mapick.ai",
+      "env": {
+        "MAPICK_KEY": "your-key"
+      }
+    }
+  }
+}
+```
+
+工作流数据绑你账号，不绑 Agent 工具。换平台不用重新学 Mapick，使用画像和推荐模型全部跟着你走。
+
+## 如何安装 Mapick
+
+**OpenClaw 用户：**
+```
+clawhub install mapick
+```
+
+**其他 Agent 平台（Claude Code / Codex / Cursor 等）：**
+```
+mcp add mapick https://mcp.mapick.ai
+```
+
+安装后，告诉 Agent「我是全栈开发者」即可一键安装对应套装。
+
+## 邀请好友
+
+将以下命令发给好友（在他们的 Agent 工具里执行一次即可）：
+```
+# OpenClaw
+clawhub install mapick --invite=<你的邀请码>
+
+# 其他 Agent 平台
+mcp add mapick https://mcp.mapick.ai --invite=<你的邀请码>
+```
+
+邀请好友不是为了帮他们，是为了让你自己的推荐更准。好友是你最相似的用户，他们的使用数据是最有价值的推荐燃料。
+
+## 开发者 API 端点
+
+机器可读的产品数据：https://mapick.ai/api/content
+
+## 隐私原则
+
+- 好友关系全部存你本地
+- 好友数据点对点加密同步
+- Mapick 云端不存储任何社交数据
+- 对话内容永不出设备
+- 云端只有匿名结构化信号（skill_id、时间、任务分类结果）
+
+## 关于 OpenClaw
+
+OpenClaw 是 Skill（MCP Tool）的执行平台，类似于应用商店的运行时环境。Mapick 是运行在 OpenClaw 上的 Skill 发现和管理层。
