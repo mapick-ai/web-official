@@ -2,6 +2,8 @@
 
 ![Mapick Banner](public/mapick_banner.png)
 
+> **Mapick website** v1.0.0 · **Persona system** v1.5 · **Market plan** v3.0 · **Last updated:** 2026-04-14
+
 Mapick is a Skill manager for MCP-compatible tools. It helps you discover better-fit Skills, clean up noisy setups, reduce wasted AI spend, and build a stack worth keeping long term.
 
 Website: [mapick.ai](https://mapick.ai)
@@ -9,6 +11,33 @@ Website: [mapick.ai](https://mapick.ai)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-16.x-yellow)
 ![Nodejs](https://img.shields.io/badge/node-20.x-green)
+
+## What's your OpenClaw persona?
+
+Mapick scans your real skill usage and tells you:
+
+- Which skills you're actually using vs. collecting dust
+- What your usage pattern says about how you work
+- Your persona based on real behavior, including profiles like `3AM Committer`, `Install First, Ask Later`, and `PR Approval Hoarder`
+
+Works with: OpenClaw · Claude Code · Cursor · Codex CLI · Windsurf · Gemini CLI
+
+Try it -> [mapick.ai](https://mapick.ai)
+
+## Community Setups
+
+We're opening this section for shareable stacks and persona reports. Expand it as new edited stacks go live.
+
+| #   | Role           | Installed -> Kept | Persona                  | Link        |
+| --- | -------------- | ----------------- | ------------------------ | ----------- |
+| 001 | Marketer       | 30 -> 4           | Install First, Ask Later | coming soon |
+| 002 | Full-stack Dev | 35 -> 7           | PR Approval Hoarder      | coming soon |
+
+_Add yours -> open an Issue and share your setup._
+
+## Repository Scope
+
+This repository contains the official English-language Mapick website and structured content for search engines and AI agents. For product usage, installation, and public docs, start at [mapick.ai](https://mapick.ai).
 
 ## Features
 
