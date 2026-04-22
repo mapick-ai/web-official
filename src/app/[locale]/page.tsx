@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import StatsBanner from "@/components/StatsBanner";
 import Marquee from "@/components/Marquee";
-import WhySteps from "@/components/WhySteps";
+import StepsTimeline from "@/components/StepsTimeline";
+import Capabilities from "@/components/Capabilities";
 import Report from "@/components/Report";
 import Scenarios from "@/components/Scenarios";
 import SetupsAndPlatforms from "@/components/SetupsAndPlatforms";
+import Trust from "@/components/Trust";
 import FooterCTA from "@/components/FooterCTA";
 
 export default function Home() {
@@ -20,11 +23,14 @@ export default function Home() {
 
       <main>
         <Hero />
+        <StatsBanner />
         <Marquee />
-        <WhySteps />
+        <StepsTimeline />
+        <Capabilities />
         <Report />
         <Scenarios />
         <SetupsAndPlatforms />
+        <Trust />
         <FooterCTA />
       </main>
     </>

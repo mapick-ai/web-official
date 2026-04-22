@@ -3,7 +3,58 @@
   "nav": {
     "brand": "Mapick",
     "sub": "MCP 호환 도구를 위한 Skill manager",
-    "install": "설치"
+    "install": "설치",
+    "docs": "Docs",
+    "github": "GitHub",
+    "persona": "내 페르소나"
+  },
+  "statsBanner": {
+    "items": [
+      ["23,400+", "누적 설치"],
+      ["120K+", "일일 AI 인터랙션"],
+      ["16,000+", "ClawHub Skill"]
+    ]
+  },
+  "capabilities": {
+    "tag": "// Core Capabilities",
+    "title": "다섯 가지 기능, 하나의 명령어",
+    "flagship": "FLAGSHIP",
+    "suggested": "추천 Skills",
+    "newCount": "4 new",
+    "idleLabel": "idle",
+    "cards": [
+      ["Smart Recommendations", "Agent 역할, 사용 패턴, 워크플로 변화에 기반한 추천. 인기 순위가 아닙니다."],
+      ["Workflow Bundles", "같은 유형의 개발자들이 가장 자주 쓰는 툴 번들을 원클릭 설치."],
+      ["Zombie Detection", "매 세션마다 컨텍스트를 먹는 방치된 Skills를 찾아냅니다."],
+      ["Skill Persona", "/mapick report로 공유 가능한 페르소나 카드를 생성합니다."],
+      ["Security Scoring", "Skills의 36%에 프롬프트 인젝션 위험이 있습니다. 모든 추천은 보안 검사를 거칩니다."]
+    ],
+    "personaName": "미드나잇 시퍼"
+  },
+  "trust": {
+    "tag": "// Open Source Commitment",
+    "title": "Open source · Free · No data stored",
+    "body": "오픈소스, 비영리, 프라이버시는 Mapick의 핵심 가치입니다.",
+    "cards": [
+      ["Open Source", "완전 오픈소스. 누구나 감사, 포크, 기여 가능. 독점 잠금 없음.", "View source"],
+      ["No Data Stored", "행동 데이터는 로컬에서 익명화됩니다. API Key는 기기를 떠나지 않습니다. 언제든 삭제 가능.", "Privacy policy"],
+      ["Non-Profit Project", "광고도, 추가 판매도, 데이터 판매도 없습니다. 수익화가 아닌 개발자 생산성을 위해 만들어졌습니다.", "About us"]
+    ]
+  },
+  "footerLinks": {
+    "product": "Product",
+    "community": "Community",
+    "legal": "Legal",
+    "ecosystem": "Ecosystem",
+    "docs": "Docs",
+    "api": "API",
+    "bundles": "Bundles",
+    "persona": "Persona",
+    "github": "GitHub",
+    "discord": "Discord",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© 2026 Mapick"
   },
   "hero": {
     "badge": "Claude Code · Codex · Gemini CLI",

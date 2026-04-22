@@ -40,6 +40,11 @@ export default function Navbar() {
             <div className="brand-sub">{t("sub")}</div>
           </div>
         </div>
+        <nav className="nav-links">
+          <a className="nav-link" href="#">{t("docs")}</a>
+          <a className="nav-link" href="https://github.com/mapick-ai/mapick-skill" target="_blank" rel="noreferrer">{t("github")}</a>
+          <a className="nav-link" href="#persona">{t("persona")}</a>
+        </nav>
         <div className="controls">
           <div className="lang-switch">
             {localeMap.map(([key, label]) => (

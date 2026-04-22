@@ -3,7 +3,58 @@
   "nav": {
     "brand": "Mapick",
     "sub": "Skill manager for MCP-compatible tools",
-    "install": "Install"
+    "install": "Install",
+    "docs": "Docs",
+    "github": "GitHub",
+    "persona": "Your Persona"
+  },
+  "statsBanner": {
+    "items": [
+      ["23,400+", "Installs"],
+      ["120K+", "Daily AI interactions"],
+      ["16,000+", "Skills on ClawHub"]
+    ]
+  },
+  "capabilities": {
+    "tag": "// Core Capabilities",
+    "title": "Five capabilities. One command.",
+    "flagship": "FLAGSHIP",
+    "suggested": "Suggested for you",
+    "newCount": "4 new",
+    "idleLabel": "idle",
+    "cards": [
+      ["Smart Recommendations", "Based on your agent role, usage patterns, and workflow evolution — not what's trending."],
+      ["Workflow Bundles", "One-click install of proven toolchain bundles used by developers like you."],
+      ["Zombie Detection", "Surface idle Skills eating your context window every session."],
+      ["Skill Persona", "Run /mapick report to generate your shareable persona card."],
+      ["Security Scoring", "36% of Skills carry prompt injection risks. Every recommendation passes a security check."]
+    ],
+    "personaName": "Midnight Shipper"
+  },
+  "trust": {
+    "tag": "// Open Source Commitment",
+    "title": "Open source · Free · No data stored",
+    "body": "Open source, non-profit, and privacy are core to what Mapick is.",
+    "cards": [
+      ["Open Source", "Fully open source. Anyone can audit, fork, or contribute. No proprietary lock-in.", "View source"],
+      ["No Data Stored", "Behavior data anonymized locally. API Keys never leave your device. Delete any time.", "Privacy policy"],
+      ["Non-Profit Project", "No ads. No upsells. No data sales. Built for developer productivity, not monetization.", "About us"]
+    ]
+  },
+  "footerLinks": {
+    "product": "Product",
+    "community": "Community",
+    "legal": "Legal",
+    "ecosystem": "Ecosystem",
+    "docs": "Docs",
+    "api": "API",
+    "bundles": "Bundles",
+    "persona": "Persona",
+    "github": "GitHub",
+    "discord": "Discord",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© 2026 Mapick"
   },
   "hero": {
     "badge": "Claude Code · Codex · Gemini CLI",

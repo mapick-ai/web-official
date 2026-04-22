@@ -3,7 +3,58 @@
   "nav": {
     "brand": "Mapick",
     "sub": "面向 MCP 工具的 Skill 管理",
-    "install": "安装"
+    "install": "安装",
+    "docs": "文档",
+    "github": "GitHub",
+    "persona": "我的人格"
+  },
+  "statsBanner": {
+    "items": [
+      ["23,400+", "累计安装"],
+      ["120K+", "日均 AI 交互"],
+      ["16,000+", "Skill 覆盖"]
+    ]
+  },
+  "capabilities": {
+    "tag": "// 核心能力",
+    "title": "五大能力，一个命令触发",
+    "flagship": "FLAGSHIP",
+    "suggested": "为你推荐",
+    "newCount": "4 new",
+    "idleLabel": "idle",
+    "cards": [
+      ["智能推荐", "基于你的 Agent 角色 × 使用习惯 × 工作流演变，推荐真正适合你的 Skills，而不是热门榜。"],
+      ["Skill 套件", "一键安装同类开发者最常用的完整工具链组合。"],
+      ["僵尸清理", "找出 30 天未调用却每次加载 context 的闲置 Skills。"],
+      ["人格报告", "/mapick report 生成你的工作人格卡，一键分享。"],
+      ["安全评分", "36% 的 Skills 存在 prompt 注入风险，每个推荐都先过滤。"]
+    ],
+    "personaName": "午夜交付者"
+  },
+  "trust": {
+    "tag": "// 开源承诺",
+    "title": "开源 · 公益 · 不存你的数据",
+    "body": "开源、公益、隐私是 Mapick 的核心定位。",
+    "cards": [
+      ["开源可审计", "代码全部开源，任何人可审查、修改、使用。没有专有锁定。", "查看源码"],
+      ["不存数据", "行为数据去敏上传 · API Key 本地脱敏 · 可随时删除 · 不卖数据 · 不卖广告", "看隐私政策"],
+      ["公益项目", "不卖数据 · 不卖广告 · 不做增值服务。Mapick 是为开发者生产力而建，不是为了变现。", "了解我们"]
+    ]
+  },
+  "footerLinks": {
+    "product": "产品",
+    "community": "社区",
+    "legal": "法务",
+    "ecosystem": "友情链接",
+    "docs": "文档",
+    "api": "API",
+    "bundles": "套件",
+    "persona": "人格",
+    "github": "GitHub",
+    "discord": "Discord",
+    "privacy": "隐私政策",
+    "terms": "用户协议",
+    "copyright": "© 2026 Mapick"
   },
   "hero": {
     "badge": "Claude Code · Codex · Gemini CLI",
