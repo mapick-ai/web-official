@@ -46,6 +46,7 @@ export default function SetupsAndPlatforms() {
                 <div className="setup-role">{card[1]}</div>
                 <div className="setup-stat">{card[2]}</div>
                 <div className="setup-stack">{card[3]}</div>
+                {card[4] && <div className="setup-quote">{card[4]}</div>}
                 <button className="soft-btn" onClick={() => copyText(card[3])}>&#x29C9; {ts("cta")}</button>
               </div>
             ))}

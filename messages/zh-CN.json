@@ -1,122 +1,127 @@
 {
   "lang": { "en": "EN", "zh": "中", "ko": "한" },
-  "nav": { "brand": "Mapick", "sub": "面向 MCP 工具的 Skill 管理", "install": "安装" },
+  "nav": {
+    "brand": "Mapick",
+    "sub": "面向 MCP 工具的 Skill 管理",
+    "install": "安装"
+  },
   "hero": {
-    "badge": "MCP Skill 管家",
-    "title1": "找到真正适合你",
-    "title2": "工作方式的 Skills",
-    "desc": "Mapick 是一个 Skill 管家，帮你发现更合适的 Skills、清理嘈杂的配置、减少 AI 成本浪费，并构建一套值得长期保留的工具栈。它基于真实使用信号、工作流模式和安全过滤，而不是通用排名。",
+    "badge": "Claude Code · Codex · Gemini CLI",
+    "title1": "按你工作方式推荐 AI Skills",
+    "title2": "",
+    "desc": "Mapick 学习你的 Agent 角色、已有工具栈和工作流变化，推荐你真正缺少的 Skills，不是热门榜推荐。一个越用越聪明的个人 Skill 顾问。",
     "command": "clawhub install mapick",
-    "stats": ["ClawHub 上 13,729 个 Skills", "30 秒扫描", "兼容多种 MCP 工具"],
-    "lineStrip": ["个性化推荐", "减少 AI 浪费", "配置清理", "工作流套装", "可分享报告"]
+    "stats": ["30 秒扫描", "兼容多种 MCP 工具"],
+    "lineStrip": ["个性化推荐", "减少 AI 浪费开销", "配置清理", "工作流套装", "分享报告"]
   },
   "why": {
     "tag": "// 为什么选 Mapick",
-    "title": "五个让人一直回来用 Mapick 的理由",
-    "body": "目标不是装更多，而是留下真正合适的、减少 AI 浪费、持续构建更强的工具栈。",
+    "title": "五个让用户留下来的理由",
+    "body": "一个越用越聪明的个人 Skill 顾问。不是热门排行，不是静态列表。",
     "cards": [
-      ["个性化推荐", "Mapick 基于真实使用、工作流匹配度和你的实际工作方式来推荐 Skills。"],
-      ["配置清理", "发现闲置、重复或低匹配的 Skills，让配置更轻、更易维护。"],
-      ["降低 AI 成本", "更干净的配置和更合适的推荐，帮你减少浪费的上下文、工具开销和不必要的 AI 花费。"],
-      ["安全过滤", "推荐在进入候选名单前，先经过质量和安全信号过滤。"],
-      ["工作流套装", "Mapick 能推荐角色套装，并在工作流不完整时补齐缺失的部分。"]
+      ["越用越准的推荐", "基于四个维度推荐，没有任何排行榜会追踪这些：你的 Agent 角色、已安装的工具栈、使用习惯、以及工作流的变化。不是热门榜，是真正适合你缺口的推荐。"],
+      ["自动补全工作流", "工具链缺了一环？Mapick 检测缺口，推荐能补上的工具。"],
+      ["僵尸 Skills 检测", "30 天没用过？标记。一次扫描找出吃灰工具、重复安装和浪费的上下文。"],
+      ["节省 AI 开销（最高 70%）", "没用的 Skills 每次运行都在浪费上下文 token。清理配置，砍掉冗余，别再为用不到的工具付费。"],
+      ["安全评分：A/B/C", "36% 的 Skills 存在 prompt 注入或安全问题。每个推荐都先经过质量和安全过滤。"]
     ]
+  },
+  "platforms": {
+    "tag": "// 兼容多种 MCP 工具",
+    "title": "任何 Agent，同一个 Mapick",
+    "body": "你刚刚复制的配置就在你的 Mapick Key 里。贴一次配置，到处都能用。",
+    "chips": ["OpenClaw", "Claude Code", "Cursor", "Codex CLI", "Windsurf", "Gemini CLI"],
+    "configTitle": "通用 MCP 配置",
+    "configBody": "一个端点，一份画像，一次复制，多处复用。",
+    "copyBtn": "复制配置"
   },
   "steps": {
-    "tag": "// 怎么用",
-    "title": "三步上手，简单到可以直接开始。",
+    "tag": "// 工作原理",
+    "title": "三步上手，足够清晰。",
     "items": [
-      ["01", "安装", "在你正在用的工具里安装 Mapick。不需要复杂流程。", "$ clawhub install mapick"],
-      ["02", "学习", "Mapick 追踪使用情况、工作流顺序和配置健康度，理解哪些工具属于你的栈。", ""],
-      ["03", "优化", "随着使用数据增长，获得更好的推荐、更干净的配置和更清晰的报告。", ""]
+      ["01", "安装", "在你已经使用的工具里安装 Mapick，不需要复杂流程。", "$ clawhub install mapick"],
+      ["02", "学习", "Mapick 跟踪使用、顺序和配置健康度，理解什么应该留下。", ""],
+      ["03", "优化", "随着数据积累，推荐更准，配置更清晰，报告也更有价值。", ""]
     ]
-  },
-  "report": {
-    "tag": "// 报告与分享",
-    "title": "你的 MCP 人设是什么？",
-    "body": "Mapick 从你的真实使用中构建一张可分享的技能卡片——人设、佐证和值得复制的工具栈。第一屏是你的故事，不是产品广告。",
-    "persona": "午夜交付者",
-    "match": "87% 匹配 · 13/15 工作特质",
-    "profile": "MCP 工具 · 67 天 · Top 5%",
-    "taunt": "你的 AI 交付速度，比你的睡眠恢复速度还快。",
-    "quote": "我是 MCP 上的午夜交付者。67 天里，我的 AI 工具栈产出的成果，比我的睡眠时间能承受的还多。",
-    "stats": [
-      ["42 万字", "白鲸记 × 2", "真实产出，不是虚荣指标"],
-      ["380 次代码审查", "2 个初级开发 / 月", "别人一看就懂的硬证据"],
-      ["156 份报告", "$186 · 1250 万 token", "成本和产出放一起更可信"],
-      ["核心工具栈", "6 个月打磨", "别人真正想复制的部分"]
-    ],
-    "skills": [
-      ["GitHub Ops", "仓库工作流 · A 级", "23 次/周"],
-      ["Code Review", "AI 代码审查 · A 级", "18 次/周"],
-      ["Docker 管理", "容器工作流 · A 级", "12 次/周"],
-      ["Summarize", "文档摘要 · A 级", "9 次/周"]
-    ],
-    "cardLink": "mapick.ai/s/3am-committer",
-    "cta": "获取我的人设",
-    "shareLabel": "分享链接"
   },
   "scenarios": {
     "tag": "// 真实场景",
-    "title": "三种人，三种 Mapick 帮忙的方式。",
-    "body": "无论你在找合适的工具、清理环境，还是补全工作流，Mapick 都能给出更清晰的下一步。",
+    "title": "三个人，三种 Mapick 的用法。",
+    "body": "无论你是在找工具、清理配置，还是补全工作流，Mapick 都会给你一个更清晰的下一步。",
     "cards": [
       {
         "name": "Alice",
-        "label": "更快找到对的 Skill",
+        "label": "更快找到合适的 Skill",
         "steps": [
-          ["好友在用", "留存率高或工作流匹配度好的工具进入候选池。"],
-          ["Mapick 推荐", "它被推荐是因为匹配 Alice 的工作流，而不是仅仅因为热门。"],
-          ["一键安装", "安全和匹配度检查已经是候选名单的一部分。"]
+          ["朋友在用", "某个留存率高、匹配度强的工具进入候选。"],
+          ["Mapick 推荐", "它出现是因为适合 Alice 的工作流，而不是因为单纯热门。"],
+          ["一键安装", "安全与匹配过滤已经完成。"]
         ]
       },
       {
         "name": "Bob",
-        "label": "清理嘈杂的配置",
+        "label": "清理嘈杂配置",
         "steps": [
-          ["检测到闲置 Skills", "Mapick 发现了没有被真正使用过的工具。"],
-          ["清晰提示", "它建议保留什么、移除什么。"],
-          ["更干净的栈", "更少干扰、更少过时工具、更强的配置健康度。"]
+          ["检测吃灰工具", "Mapick 找出长期没有实际用途的 Skills。"],
+          ["清晰提示", "直接告诉 Bob 哪些值得留、哪些该移除。"],
+          ["更干净的栈", "更少干扰，更少陈旧工具，更强的配置健康度。"]
         ]
       },
       {
         "name": "Carol",
         "label": "补全工作流套装",
         "steps": [
-          ["当前状态", "Carol 已经安装了部分工作流。"],
-          ["Mapick 推荐补齐", "它推荐缺失的工具来完成整个工作流。"],
-          ["可以开工了", "结果是一个更完整的栈，不用再手动翻找。"]
+          ["当前状态", "Carol 已经安装了部分工作流工具。"],
+          ["补齐缺口", "Mapick 推荐完成这条工作流还缺哪些。"],
+          ["直接可用", "最后得到的是一套更完整的配置。"]
         ]
       }
     ]
   },
   "setups": {
-    "tag": "// 共享配置",
-    "title": "不同角色，不同工具栈",
-    "body": "重点不是装更多，而是留下真正合适的。",
+    "tag": "// 配置案例",
+    "title": "别猜了。直接抄验证过的配置。",
+    "body": "Mapick 根据真实使用模式推荐了这些配置。77% 的用户在第一周就发现了新的日常 Skill。",
     "cards": [
-      ["#001", "市场营销", "安装 30 个 → 保留 4 个", "Summarize · Tavily Search · Calendar Ops · Image Lab"],
-      ["#002", "全栈开发者", "安装 35 个 → 保留 7 个", "Code Review · GitHub Ops · Docker · CI/CD · Search"],
-      ["#003", "数据分析师", "安装 22 个 → 保留 9 个", "Notebook · Search · Charts · Report Builder"],
-      ["#004", "学生", "安装 8 个 → 保留 3 个", "Reading · Writing · Research"]
+      ["#001", "全栈开发者", "Mapick 推荐了 7 个中的 5 个 · 月均 412 次代码审查", "Code Review · GitHub Ops · Docker · CI/CD · Summarize · Search · capability-evolver", "“Mapick 在我还不知道自己需要它的时候，就找到了 capability-evolver。”"],
+      ["#002", "数据分析师", "Mapick 推荐了 9 个中的 6 个 · 生成 89 份报告", "Notebook · Search · Charts · Report Builder · SQL Helper · Data Clean · Summarize · Export · Scheduler", "“Mapick 推荐了 2 个我从没搜过的 Skills，两个都成了每天必用。”"],
+      ["#003", "市场人员", "Mapick 找到了全部 4 个 · 每天省 2 小时", "Summarize · Tavily Search · Calendar Ops · Image Lab", "“我告诉 Mapick 我是市场人员，它一次扫描就建好了我的整套配置。”"],
+      ["#004", "学生", "Mapick 推荐了 3 个中的 2 个 · 总结了 58 篇论文", "Reading · Writing · Research", "“Mapick 比我自己还懂研究生需要什么。”"]
     ],
     "cta": "复制这套配置 →",
-    "note": "不同角色，不同栈，不同适配。"
+    "note": "不同角色，不同栈，不同匹配方式。"
   },
-  "platforms": {
-    "tag": "// 兼容多种 MCP 工具",
-    "title": "一份画像，多个工具共用",
-    "body": "在多种 MCP 工具中使用 Mapick，无需从零重建配置。",
-    "chips": ["OpenClaw", "Claude Code", "Cursor", "Codex CLI", "Windsurf", "Gemini CLI"],
-    "configTitle": "通用 MCP 配置",
-    "configBody": "一个端点，一份画像，一套配置。复制一次，跨客户端复用。",
-    "copyBtn": "复制配置"
+  "report": {
+    "tag": "// 报告与分享",
+    "title": "你是什么 OpenClaw 人格？",
+    "body": "Mapick 将你的推荐结果、使用数据和你的决策，变成一张可分享的技能名片。是你的故事。",
+    "persona": "午夜交付者",
+    "match": "87% 匹配 · 命中 13/15 个工作特征",
+    "profile": "OpenClaw · 67 天 · Top 5%",
+    "taunt": "你的 AI 交付速度，比你的睡眠恢复速度还快。",
+    "quote": "我是 OpenClaw 的“午夜交付者”。67 天里，我的 AI 技能栈交付的成果，比我的作息还稳定。",
+    "recommendedBadge": "Mapick 推荐",
+    "stats": [
+      ["42 万字", "≈ 5 本书", "先给人‘哇’的重量感"],
+      ["380 次代码审查", "≈ 2 个初级工程师 1 个月", "用别人秒懂的参照物表达价值"],
+      ["7 个中 5 个 Skills", "由 Mapick 推荐", "推荐是这套栈的主角"],
+      ["核心栈", "6 个月迭代留下的", "这是最容易触发复制欲的部分"]
+    ],
+    "skills": [
+      ["GitHub Ops", "仓库协作 · A 级", "23 次/周", true],
+      ["Code Review", "AI 审查助手 · A 级", "18 次/周", true],
+      ["Docker Management", "容器工作流 · A 级", "12 次/周", false],
+      ["Summarize", "文档速览 · A 级", "9 次/周", true]
+    ],
+    "cardLink": "mapick.ai/s/ye-mao-ma-nong",
+    "cta": "生成我的人格",
+    "shareLabel": "分享链接"
   },
   "footer": {
-    "title": "留下有用的。发现合适的。",
-    "body": "安装 Mapick，清掉噪音，构建一套真正属于你的 Skill 配置。",
-    "cta": "立即开始",
-    "points": ["对话内容保留本地", "仅匿名信号", "加密同步", "用户控制分享"],
-    "note": "Mapick：MCP 工具的 Skill 管家，个性化推荐、配置清理、套装、报告与可分享配置。"
+    "title": "看看你的配置到底在干什么",
+    "body": "30 秒扫描。永久免费。无需信用卡。",
+    "cta": "免费安装 Mapick",
+    "points": ["对话内容留在本地", "仅匿名信号", "加密同步", "用户控制分享"],
+    "note": "由一个删得比装得多的团队打造。"
   }
 }

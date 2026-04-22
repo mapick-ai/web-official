@@ -1,26 +1,39 @@
 {
   "lang": { "en": "EN", "zh": "中", "ko": "한" },
-  "nav": { "brand": "Mapick", "sub": "Skill manager for MCP-compatible tools", "install": "Install" },
+  "nav": {
+    "brand": "Mapick",
+    "sub": "Skill manager for MCP-compatible tools",
+    "install": "Install"
+  },
   "hero": {
-    "badge": "MCP Skill Manager",
-    "title1": "Find the right Skills",
-    "title2": "for the way you actually work",
-    "desc": "Mapick is a Skill manager that helps you discover better-fit Skills, clean up noisy setups, reduce wasted AI spend, and build a stack worth keeping long term. It uses real usage signals, workflow patterns, and safety filters instead of generic rankings.",
+    "badge": "Claude Code · Codex · Gemini CLI",
+    "title1": "Skills recommended for how you work",
+    "title2": "",
+    "desc": "Mapick learns your agent role, your stack, and how your workflow evolves. It surfaces the Skills you're actually missing. Not what's trending. A personal skill advisor that gets smarter the longer you use it.",
     "command": "clawhub install mapick",
-    "stats": ["13,729 Skills on ClawHub", "30-second scan", "Works across MCP-compatible tools"],
+    "stats": ["30-second scan", "Works across MCP-compatible tools"],
     "lineStrip": ["Personalized recommendations", "Reduce wasted AI spend", "Setup cleanup", "Workflow bundles", "Shareable reports"]
   },
   "why": {
     "tag": "// Why Mapick",
-    "title": "Five reasons people keep coming back to Mapick",
-    "body": "The goal is not to install more. The goal is to keep what fits, reduce wasted AI spend, and build a stronger stack over time.",
+    "title": "Five reasons people keep coming back",
+    "body": "A personal skill advisor that gets smarter the longer you use it. Not a popularity ranking. Not a static list.",
     "cards": [
-      ["Personalized recommendations", "Mapick recommends Skills based on real usage, workflow fit, and how you actually work."],
-      ["Setup cleanup", "It spots idle, duplicate, or low-fit Skills so your setup gets lighter and easier to maintain over time."],
-      ["Lower AI costs", "Cleaner setups and better-fit recommendations help cut wasted context, tool overhead, and avoidable AI spend."],
-      ["Safety filters", "Recommendations can be filtered through quality and safety signals before they reach your shortlist."],
-      ["Workflow bundles", "Mapick can suggest role-based bundles and fill the missing pieces when a workflow is only partially complete."]
+      ["Recommendations That Learn", "Built on four signals no leaderboard tracks: your agent role, your installed stack, your usage patterns, and how your workflow evolves. Not what's popular. What fits your gaps."],
+      ["Auto-Complete Your Workflow", "Missing a step in your toolchain? Mapick detects gaps and suggests the tools that finish the job."],
+      ["Dead Skills Detected", "Idle for 30 days? Flagged. One scan finds zombie skills, duplicate tools, and wasted context across your entire setup."],
+      ["Cut AI Spend (up to 70%)", "Unused skills waste context tokens every time they run. Clean your stack, cut the bloat, and stop paying for tools you never use."],
+      ["Security Score: A/B/C", "36% of skills have prompt injection or safety issues. Every recommendation is filtered through quality and security checks first."]
     ]
+  },
+  "platforms": {
+    "tag": "// Works across MCP-compatible tools",
+    "title": "Any Agent. Same Mapick.",
+    "body": "The stack you just copied lives in your Mapick Key. Add this config once, and it works everywhere.",
+    "chips": ["OpenClaw", "Claude Code", "Cursor", "Codex CLI", "Windsurf", "Gemini CLI"],
+    "configTitle": "Universal MCP config",
+    "configBody": "One endpoint, one profile, one setup. Copy it once and reuse it across supported clients.",
+    "copyBtn": "Copy config"
   },
   "steps": {
     "tag": "// How it works",
@@ -30,31 +43,6 @@
       ["02", "Learn", "Mapick tracks usage, workflow order, and setup health to understand what belongs in your stack.", ""],
       ["03", "Improve", "Get better recommendations, cleaner setups, and clearer reports as your usage data grows.", ""]
     ]
-  },
-  "report": {
-    "tag": "// Reports and sharing",
-    "title": "What's your MCP persona?",
-    "body": "Mapick builds a shareable skill card from your real usage — persona, proof points, and a stack worth copying. First screen is your story, not a product pitch.",
-    "persona": "Midnight Shipper",
-    "match": "87% match · 13/15 work traits",
-    "profile": "MCP Tools · 67 days · Top 5%",
-    "taunt": "Your AI ships faster than your sleep schedule recovers.",
-    "quote": "I am a Midnight Shipper on MCP. In 67 days, my AI stack delivered more output than my sleep schedule could defend.",
-    "stats": [
-      ["420K words", "Moby Dick × 2", "Real output, not vanity stats"],
-      ["380 code reviews", "2 junior devs / month", "Concrete proof people understand instantly"],
-      ["156 reports", "$186 · 12.5M tokens", "Cost and output together feel more believable"],
-      ["Core stack", "6 months of refinement", "What people actually want to copy"]
-    ],
-    "skills": [
-      ["GitHub Ops", "Repository workflow · Grade A", "23/week"],
-      ["Code Review", "AI review assistant · Grade A", "18/week"],
-      ["Docker Management", "Container workflow · Grade A", "12/week"],
-      ["Summarize", "Document digest · Grade A", "9/week"]
-    ],
-    "cardLink": "mapick.ai/s/3am-committer",
-    "cta": "Get my persona",
-    "shareLabel": "Share link"
   },
   "scenarios": {
     "tag": "// Real-World Scenarios",
@@ -92,31 +80,48 @@
   },
   "setups": {
     "tag": "// Shared setups",
-    "title": "Different roles keep different stacks",
-    "body": "The point is not to install more. The point is to keep what truly fits.",
+    "title": "Stop guessing. Copy a proven stack.",
+    "body": "Mapick recommended these stacks based on real usage patterns. 77% of users found a new daily-use Skill in the first week.",
     "cards": [
-      ["#001", "Marketer", "30 installed → kept 4", "Summarize · Tavily Search · Calendar Ops · Image Lab"],
-      ["#002", "Full-stack Developer", "35 installed → kept 7", "Code Review · GitHub Ops · Docker · CI/CD · Search"],
-      ["#003", "Data Analyst", "22 installed → kept 9", "Notebook · Search · Charts · Report Builder"],
-      ["#004", "Student", "8 installed → kept 3", "Reading · Writing · Research"]
+      ["#001", "Full-stack Developer", "Mapick recommended 5 of 7 · 412 code reviews/mo", "Code Review · GitHub Ops · Docker · CI/CD · Summarize · Search · capability-evolver", "“Mapick found capability-evolver before I knew I needed it.”"],
+      ["#002", "Data Analyst", "Mapick surfaced 6 of 9 · 89 reports generated", "Notebook · Search · Charts · Report Builder · SQL Helper · Data Clean · Summarize · Export · Scheduler", "“Mapick suggested 2 Skills I’d never searched for. Both became daily tools.”"],
+      ["#003", "Marketer", "Mapick found all 4 · 2h saved daily", "Summarize · Tavily Search · Calendar Ops · Image Lab", "“I told Mapick I’m a marketer. It built my entire stack in one scan.”"],
+      ["#004", "Student", "Mapick suggested 2 of 3 · 58 papers summarized", "Reading · Writing · Research", "“Mapick knew what a research student needs better than I did.”"]
     ],
     "cta": "Copy this setup →",
     "note": "Different role, different stack, different fit."
   },
-  "platforms": {
-    "tag": "// Works across MCP-compatible tools",
-    "title": "One profile across multiple tools",
-    "body": "Use Mapick across MCP-compatible tools without rebuilding your setup from scratch.",
-    "chips": ["OpenClaw", "Claude Code", "Cursor", "Codex CLI", "Windsurf", "Gemini CLI"],
-    "configTitle": "Universal MCP config",
-    "configBody": "One endpoint, one profile, one setup. Copy it once and reuse it across supported clients.",
-    "copyBtn": "Copy config"
+  "report": {
+    "tag": "// Reports and sharing",
+    "title": "What’s your OpenClaw persona?",
+    "body": "Mapick turns your recommendations, your usage data, and your decisions into a shareable skill card. Your story.",
+    "persona": "Midnight Shipper",
+    "match": "87% match · 13/15 work traits",
+    "profile": "OpenClaw · 67 days · Top 5%",
+    "taunt": "Your AI ships faster than your sleep schedule recovers.",
+    "quote": "I am a Midnight Shipper on OpenClaw. In 67 days, my AI stack delivered more output than my sleep schedule could defend.",
+    "recommendedBadge": "Mapick-recommended",
+    "stats": [
+      ["420K words", "Moby Dick × 2", "Real output, not vanity stats"],
+      ["380 code reviews", "2 junior devs / month", "Concrete proof people understand instantly"],
+      ["5 of 7 Skills", "Discovered via Mapick", "Recommendation is the hero of the stack"],
+      ["Core stack", "6 months of refinement", "What people actually want to copy"]
+    ],
+    "skills": [
+      ["GitHub Ops", "Repository workflow · Grade A", "23/week", true],
+      ["Code Review", "AI review assistant · Grade A", "18/week", true],
+      ["Docker Management", "Container workflow · Grade A", "12/week", false],
+      ["Summarize", "Document digest · Grade A", "9/week", true]
+    ],
+    "cardLink": "mapick.ai/s/3am-committer",
+    "cta": "Get my persona",
+    "shareLabel": "Share link"
   },
   "footer": {
-    "title": "Keep what works. Discover what fits.",
-    "body": "Install Mapick, clean the noise, and build a Skill setup that actually belongs to you.",
-    "cta": "Get started",
+    "title": "See what your stack is actually doing",
+    "body": "30-second scan. Free forever. No credit card.",
+    "cta": "Install Mapick Free",
     "points": ["Conversation content stays local", "Anonymous signals only", "Encrypted sync", "User-controlled sharing"],
-    "note": "Mapick: Skill manager for MCP-compatible tools, personalized Skill recommendations, setup cleanup, bundles, reports, and shareable configs."
+    "note": "Built by a team that deletes more than it installs."
   }
 }

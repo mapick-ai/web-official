@@ -10,7 +10,13 @@ function copyText(v: string) {
 export default function Report() {
   const t = useTranslations("report");
   const stats = t.raw("stats") as string[][];
-  const skills = t.raw("skills") as string[][];
+  const skills = t.raw("skills") as (string | boolean)[][];
+  let recommendedBadge = "";
+  try {
+    recommendedBadge = t("recommendedBadge");
+  } catch {
+    recommendedBadge = "";
+  }
 
   return (
     <section className="report-section">
@@ -57,15 +63,28 @@ export default function Report() {
                   <p>{t("quote")}</p>
                 </div>
                 <div className="report-skills">
-                  {skills.map((skill) => (
-                    <div key={skill[0]} className="skill-card">
-                      <div>
-                        <div className="skill-name">{skill[0]}</div>
-                        <div className="skill-desc">{skill[1]}</div>
+                  {skills.map((skill) => {
+                    const name = skill[0] as string;
+                    const desc = skill[1] as string;
+                    const freq = skill[2] as string;
+                    const recommended = skill[3] as boolean | undefined;
+                    return (
+                      <div key={name} className="skill-card">
+                        <div>
+                          <div className="skill-name">
+                            {name}
+                            {recommended && recommendedBadge && (
+                              <span className="skill-badge" title={recommendedBadge}>
+                                {" "}· {recommendedBadge}
+                              </span>
+                            )}
+                          </div>
+                          <div className="skill-desc">{desc}</div>
+                        </div>
+                        <div className="skill-freq">{freq}</div>
                       </div>
-                      <div className="skill-freq">{skill[2]}</div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
                 <div className="share-box">
                   <div className="share-inner">
