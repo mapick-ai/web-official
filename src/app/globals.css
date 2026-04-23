@@ -777,6 +777,7 @@ body::before {
 }
 .report-inner {
   padding: 30px 30px 34px;
+  min-width: 0;
 }
 .persona-head {
   display: flex;
@@ -784,6 +785,17 @@ body::before {
   gap: 20px;
   align-items: flex-end;
   flex-wrap: wrap;
+  min-width: 0;
+}
+.persona-head > div {
+  min-width: 0;
+  max-width: 100%;
+}
+.persona-head > div:first-child {
+  flex: 1 1 280px;
+}
+.persona-head > .report-stats-grid {
+  flex: 1 1 320px;
 }
 .persona-meta {
   font-size: 10px;
@@ -791,14 +803,16 @@ body::before {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(165, 243, 252, 0.4);
+  overflow-wrap: break-word;
 }
 .persona-name {
   margin-top: 12px;
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(32px, 4.5vw, 52px);
   line-height: 1.1;
   letter-spacing: -0.05em;
   font-weight: 700;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 .persona-match {
   display: inline-flex;
@@ -811,6 +825,9 @@ body::before {
   background: rgba(34, 211, 238, 0.08);
   font-size: 11px;
   color: rgba(165, 243, 252, 0.7);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
 }
 .dot {
   width: 6px;
@@ -823,7 +840,8 @@ body::before {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
-  min-width: min(100%, 320px);
+  min-width: 0;
+  width: 100%;
 }
 .mini-stat {
   padding: 12px 10px;
@@ -847,9 +865,9 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: rgba(255, 255, 255, 0.25);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
 }
 .taunt {
   position: relative;
@@ -879,10 +897,12 @@ body::before {
 .taunt q {
   position: relative;
   display: block;
-  font-size: 22px;
+  font-size: clamp(16px, 2.2vw, 22px);
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .taunt p {
   position: relative;
@@ -908,6 +928,10 @@ body::before {
   background: rgba(255, 255, 255, 0.02);
   min-width: 0;
 }
+.skill-card > div:first-child {
+  min-width: 0;
+  flex: 1 1 auto;
+}
 .skill-name {
   font-size: 13px;
   font-weight: 700;
@@ -919,6 +943,9 @@ body::before {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.25);
   margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .skill-freq {
   flex: 0 0 auto;
@@ -1309,10 +1336,11 @@ body::before {
     display: none;
   }
   .report-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .persona-head {
     align-items: flex-start;
+    flex-direction: column;
   }
   .report-inner {
     padding: 24px;
@@ -1322,6 +1350,11 @@ body::before {
   }
   .setups-grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 540px) {
+  .report-stats-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 720px) {
