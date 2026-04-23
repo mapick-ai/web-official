@@ -23,9 +23,9 @@
     "newCount": "4 new",
     "idleLabel": "idle",
     "cards": [
-      ["Smart Recommendations", "Based on your agent role, usage patterns, and workflow evolution — not what's trending."],
+      ["Smart Recommendations", "Recommends Skills that actually fit you. Based on your agent role, usage patterns, and workflow evolution. Not what's trending."],
       ["Workflow Bundles", "One-click install of proven toolchain bundles used by developers like you."],
-      ["Zombie Detection", "Surface idle Skills eating your context window every session."],
+      ["Zombie Detection", "Surface Skills idle for 30 days that still eat your context window every session."],
       ["Skill Persona", "Run /mapick report to generate your shareable persona card."],
       ["Security Scoring", "36% of Skills carry prompt injection risks. Every recommendation passes a security check."]
     ],
@@ -33,12 +33,12 @@
   },
   "trust": {
     "tag": "// Open Source Commitment",
-    "title": "Open source · Free · No data stored",
+    "title": "Open source · Non-profit · No data stored",
     "body": "Open source, non-profit, and privacy are core to what Mapick is.",
     "cards": [
       ["Open Source", "Fully open source. Anyone can audit, fork, or contribute. No proprietary lock-in.", "View source"],
-      ["No Data Stored", "Behavior data anonymized locally. API Keys never leave your device. Delete any time.", "Privacy policy"],
-      ["Non-Profit Project", "No ads. No upsells. No data sales. Built for developer productivity, not monetization.", "About us"]
+      ["No Data Stored", "Behavior data anonymized locally. API Keys never leave your device. No data sales. Delete any time.", "Privacy policy"],
+      ["Non-Profit", "No ads. No upsells. No data sales. Built for developer productivity, not monetization.", "About us"]
     ]
   },
   "footerLinks": {
@@ -58,7 +58,7 @@
   },
   "hero": {
     "badge": "Claude Code · Codex · Gemini CLI",
-    "title1": "Skills recommended for how you work",
+    "title1": "AI Skills recommended for how you work",
     "title2": "",
     "desc": "Mapick learns your agent role, your stack, and how your workflow evolves. It surfaces the Skills you're actually missing. Not what's trending. A personal skill advisor that gets smarter the longer you use it.",
     "command": "clawhub install mapick",
@@ -135,9 +135,9 @@
     "body": "Mapick recommended these stacks based on real usage patterns. 77% of users found a new daily-use Skill in the first week.",
     "cards": [
       ["#001", "Full-stack Developer", "Mapick recommended 5 of 7 · 412 code reviews/mo", "Code Review · GitHub Ops · Docker · CI/CD · Summarize · Search · capability-evolver", "“Mapick found capability-evolver before I knew I needed it.”"],
-      ["#002", "Data Analyst", "Mapick surfaced 6 of 9 · 89 reports generated", "Notebook · Search · Charts · Report Builder · SQL Helper · Data Clean · Summarize · Export · Scheduler", "“Mapick suggested 2 Skills I’d never searched for. Both became daily tools.”"],
+      ["#002", "Data Analyst", "Mapick recommended 6 of 9 · 89 reports generated", "Notebook · Search · Charts · Report Builder · SQL Helper · Data Clean · Summarize · Export · Scheduler", "“Mapick suggested 2 Skills I’d never searched for. Both became daily tools.”"],
       ["#003", "Marketer", "Mapick found all 4 · 2h saved daily", "Summarize · Tavily Search · Calendar Ops · Image Lab", "“I told Mapick I’m a marketer. It built my entire stack in one scan.”"],
-      ["#004", "Student", "Mapick suggested 2 of 3 · 58 papers summarized", "Reading · Writing · Research", "“Mapick knew what a research student needs better than I did.”"]
+      ["#004", "Student", "Mapick recommended 2 of 3 · 58 papers summarized", "Reading · Writing · Research", "“Mapick knew what a research student needs better than I did.”"]
     ],
     "cta": "Copy this setup →",
     "note": "Different role, different stack, different fit."
@@ -155,7 +155,7 @@
     "stats": [
       ["420K words", "Moby Dick × 2", "Real output, not vanity stats"],
       ["380 code reviews", "2 junior devs / month", "Concrete proof people understand instantly"],
-      ["5 of 7 Skills", "Discovered via Mapick", "Recommendation is the hero of the stack"],
+      ["5 of 7 Skills", "Recommended by Mapick", "Recommendation is the hero of the stack"],
       ["Core stack", "6 months of refinement", "What people actually want to copy"]
     ],
     "skills": [
