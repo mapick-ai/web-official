@@ -1,18 +1,11 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Reveal from "./Reveal";
 
-const tagByLocale: Record<string, { auto: string; sharp: string }> = {
-  en: { auto: "Auto-runs", sharp: "Gets sharper" },
-  ko: { auto: "자동 실행", sharp: "점점 정확해짐" },
-  "zh-CN": { auto: "自动运行", sharp: "越用越准" },
-  "zh-TW": { auto: "自動運行", sharp: "越用越準" },
-};
+const tags = { auto: "Auto-runs", sharp: "Gets sharper" };
 
 export default function StepsTimeline() {
   const t = useTranslations("steps");
-  const locale = useLocale();
   const items = t.raw("items") as string[][];
-  const tags = tagByLocale[locale] ?? tagByLocale.en;
 
   return (
     <section className="section">

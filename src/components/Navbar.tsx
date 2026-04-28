@@ -1,19 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
-
-const localeMap: [string, string][] = [
-  ["en", "English"],
-  ["zh-TW", "中文"],
-  ["ko", "한"],
-];
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const t = useTranslations("nav");
-  const locale = useLocale();
-  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -46,17 +37,6 @@ export default function Navbar() {
           <a className="nav-link" href="#persona">{t("persona")}</a>
         </nav>
         <div className="controls">
-          <div className="lang-switch">
-            {localeMap.map(([key, label]) => (
-              <button
-                key={key}
-                className={`lang-btn ${locale === key ? "active" : ""}`}
-                onClick={() => router.push(`/${key}`)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
           <button className="cta-btn">{t("install")}</button>
         </div>
       </div>

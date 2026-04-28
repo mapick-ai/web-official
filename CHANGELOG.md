@@ -13,5 +13,3 @@ All notable changes to this project will be documented here.
 - Mobile-first dark theme, responsive layout
 
 ---
-
-_Format based on [Keep a Changelog](https://keepachangelog.com)_

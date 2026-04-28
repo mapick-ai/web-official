@@ -57,7 +57,7 @@ _Add yours → open an Issue with label `show-your-stack`_
 - **Next.js 16** (App Router) + **React 19**
 - **TypeScript 5**
 - **Tailwind CSS v4**
-- **next-intl** — i18n with 4 locales (English, Simplified Chinese, Traditional Chinese, Korean)
+- **next-intl** — English-only content layer
 - **lucide-react** — icons
 
 ## Project Structure
@@ -84,10 +84,7 @@ web-official/
 │   │   └── Reveal.tsx           # Scroll-triggered fade-in animation
 │   └── i18n/                    # next-intl routing and config
 ├── messages/
-│   ├── en.json                  # English
-│   ├── zh-CN.json               # Simplified Chinese
-│   ├── zh-TW.json               # Traditional Chinese
-│   └── ko.json                  # Korean
+│   └── en.json                  # English
 └── public/                      # Static assets (logo, og-image, robots.txt)
 ```
 
@@ -107,14 +104,7 @@ npm run build
 npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site. Routes:
-
-| Path     | Locale              |
-| -------- | ------------------- |
-| `/en`    | English             |
-| `/zh-CN` | Simplified Chinese  |
-| `/zh-TW` | Traditional Chinese |
-| `/ko`    | Korean              |
+Open [http://localhost:3000](http://localhost:3000) to view the site. The root path redirects to `/en`.
 
 ## MCP Config (all supported clients)
 
@@ -136,7 +126,6 @@ Paste this config into: OpenClaw · Claude Code · Cursor · Codex CLI · Windsu
 - Dark theme with cyan / sky / violet gradient accents
 - Floating orb backgrounds, particle effects, shimmer text animations
 - Responsive: desktop (1200px), tablet (1100/860px), mobile (720px)
-- CJK-specific adaptations: adjusted letter-spacing, line-height, word-break rules, Noto Sans SC/KR fonts
 
 ## Related
 
