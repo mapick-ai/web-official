@@ -1,77 +1,68 @@
 "use client";
 
+import { useCallback, useState } from "react";
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
-import { Shell, Card, SectionLabel } from "./ui";
+import Reveal from "./Reveal";
+import { Accent, copyText } from "./ui";
 
-async function copyText(value: string) {
-  try {
-    await navigator.clipboard.writeText(value);
-  } catch {}
-}
-
-interface BundleCard {
-  id: string;
-  role: string;
-  stat: string;
-  stack: string;
-  url: string;
-}
+type Bundle = { id: string; name: string; count: string; stack: string };
 
 export default function Bundles() {
   const t = useTranslations("bundles");
-  const cards = t.raw("cards") as BundleCard[];
+  const items = t.raw("items") as Bundle[];
+  const [copiedId, setCopiedId] = useState("");
+
+  const handleCopy = useCallback((id: string, stack: string) => {
+    copyText(stack);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(""), 1400);
+  }, []);
 
   return (
-    <section className="pt-16 md:pt-24">
-      <Shell>
-        <SectionLabel>{t("tag")}</SectionLabel>
-        <div className="max-w-3xl">
-          <h2 className="text-3xl font-semibold tracking-[-0.05em] text-white md:text-5xl">
-            {t("title")}
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-white/58">{t("body")}</p>
-        </div>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {cards.map((card) => (
-            <Card key={card.id} className="p-6 md:p-7">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300/85">
-                    {card.id}
-                  </div>
-                  <div className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-white">
-                    {card.role}
-                  </div>
+    <section className="section">
+      <div className="container">
+        <Reveal>
+          <div className="text-center-wrap">
+            <div className="section-label">{t("tag")}</div>
+            <h2>
+              <Accent text={t("title")} accent={t("accent")} />
+            </h2>
+            <p className="lead">{t("body")}</p>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="bundles-grid">
+            {items.map((b, i) => {
+              const featured = i === 0;
+              return (
+                <div
+                  key={b.id}
+                  className={`bundle-card${featured ? " featured" : ""}`}
+                  data-featured={featured ? t("featuredLabel") : undefined}
+                >
+                  <div className="bundle-id">{b.id}</div>
+                  <div className="bundle-name">{b.name}</div>
+                  <div className="bundle-count">{b.count}</div>
+                  <div className="bundle-stack">{b.stack}</div>
+                  {featured && (
+                    <div className="bundle-match">
+                      <span>{t("matchLabel")}</span>
+                      <span className="bar">
+                        <i />
+                      </span>
+                      <span>65%</span>
+                    </div>
+                  )}
+                  <button className="soft-btn" onClick={() => handleCopy(b.id, b.stack)}>
+                    {copiedId === b.id ? "✓ Copied" : `⧉ ${t("cta")}`}
+                  </button>
                 </div>
-                <span className="rounded-full border border-cyan-300/15 bg-cyan-300/10 px-3 py-2 text-xs font-medium text-cyan-300">
-                  {card.stat}
-                </span>
-              </div>
-
-              <div className="mt-6 rounded-[22px] border border-white/8 bg-black/20 px-5 py-5">
-                <div className="text-xs uppercase tracking-[0.22em] text-white/28">
-                  {t("coreStack")}
-                </div>
-                <div className="mt-3 text-[15px] leading-7 text-white/70">{card.stack}</div>
-              </div>
-
-              <div className="mt-4 rounded-2xl border border-white/8 bg-black/25 px-4 py-3 font-mono text-xs leading-6 text-cyan-300/90">
-                {card.url}
-              </div>
-
-              <button
-                onClick={() => copyText(card.url)}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
-              >
-                {t("copyBtn")}
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </Card>
-          ))}
-        </div>
-      </Shell>
+              );
+            })}
+          </div>
+          <div className="bundle-list">{t("list")}</div>
+        </Reveal>
+      </div>
     </section>
   );
 }

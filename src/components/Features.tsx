@@ -1,34 +1,112 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import ScrollReveal from "./ScrollReveal";
+import Reveal from "./Reveal";
+import { Accent } from "./ui";
+import { Icon, type IconName } from "./Icons";
+
+type Feature = {
+  icon: IconName;
+  badge: string;
+  name: string;
+  headline: string;
+  body: string;
+  demo: string[];
+  link: string;
+};
 
 export default function Features() {
   const t = useTranslations("features");
-  const items = t.raw("items") as Array<{ icon: string; name: string; desc: string }>;
+  const items = t.raw("items") as Feature[];
+  const [active, setActive] = useState(1);
+
+  const activeItem = items[active] ?? items[0];
+  const ActiveIco = Icon[activeItem.icon] ?? Icon.lock;
 
   return (
-    <section id="features" className="py-[120px] px-10 max-w-[1200px] mx-auto relative">
-      <div className="font-mono text-[0.6rem] text-magenta tracking-[5px] uppercase mb-3.5">
-        {t("eyebrow")}
-      </div>
-      <div className="font-[Orbitron,sans-serif] text-[clamp(1.8rem,4vw,2.8rem)] font-black text-white tracking-[3px] mb-4">
-        {t("title")}
-      </div>
-      <div className="text-[#777] text-base max-w-[560px] leading-[1.8] mb-14">
-        {t("subtitle")}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {items.map((f, i) => (
-          <ScrollReveal key={i}>
-            <div className="p-8 px-7 bg-[rgba(10,10,10,0.5)] border border-[rgba(255,255,255,0.04)] transition-all duration-300 relative hover:bg-[rgba(0,245,212,0.02)] hover:border-[rgba(0,245,212,0.1)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">
-              <div className="text-[1.6rem] mb-3.5">{f.icon}</div>
-              <div className="font-black text-[1.05rem] text-[#ddd] mb-2">{f.name}</div>
-              <div className="text-[0.88rem] text-[#666] leading-[1.6]">{f.desc}</div>
+    <section className="section" id="features">
+      <div className="container">
+        <Reveal>
+          <div className="text-center-wrap">
+            <div className="section-label">{t("tag")}</div>
+            <h2>
+              <Accent text={t("title")} accent={t("accent")} />
+            </h2>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="feat-luxe-shell">
+            <div className="feat-luxe-top">
+              <div className="feat-luxe-tabs">
+                {items.map((item, index) => (
+                  <button
+                    key={item.name}
+                    type="button"
+                    className={`feat-luxe-tab${index === active ? " active" : ""}`}
+                    onMouseEnter={() => setActive(index)}
+                    onFocus={() => setActive(index)}
+                    onClick={() => setActive(index)}
+                  >
+                    <span className="feat-luxe-tab-index">{String(index + 1).padStart(2, "0")}</span>
+                    <span>{item.name}</span>
+                  </button>
+                ))}
+              </div>
             </div>
-          </ScrollReveal>
-        ))}
+
+            <div className="feat-luxe-board">
+              <div key={activeItem.name} className="feat-luxe-grid">
+                <div className="feat-luxe-copy">
+                  <div className="feat-luxe-row">
+                    <span className="feat-luxe-kicker">{activeItem.badge}</span>
+                    <span className="feat-luxe-counter">
+                      {`${t("counterPrefix")} ${String(active + 1).padStart(2, "0")} / ${String(items.length).padStart(2, "0")}`}
+                    </span>
+                  </div>
+
+                  <div className="feat-luxe-meter">
+                    <i style={{ width: `${((active + 1) / items.length) * 100}%` }} />
+                  </div>
+
+                  <div className="feat-luxe-head">
+                    <div className="feat-ico">
+                      <ActiveIco />
+                    </div>
+                    <div>
+                      <span className="feat-badge">{activeItem.badge}</span>
+                      <div className="feat-name">{activeItem.name}</div>
+                      <div className="feat-headline">{activeItem.headline}</div>
+                    </div>
+                  </div>
+
+                  <p className="feat-luxe-body">{activeItem.body}</p>
+
+                  {activeItem.link ? (
+                    <div className="feat-luxe-footer">
+                      <a href="#" className="feat-link">
+                        {activeItem.link}
+                      </a>
+                    </div>
+                  ) : null}
+                </div>
+
+                <div className="feat-luxe-demo-wrap">
+                  <div className="feat-luxe-demo-shadow" />
+                  <div className="feat-luxe-demo">
+                    <div className="feat-luxe-demo-bar">
+                      <i />
+                      <i />
+                      <i />
+                      <span>{t("liveLabel")}</span>
+                    </div>
+                    <pre className="feat-luxe-demo-content">{activeItem.demo.join("\n")}</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

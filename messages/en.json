@@ -1,177 +1,305 @@
 {
   "nav": {
     "brand": "Mapick",
-    "sub": "Skill manager for MCP-compatible tools",
+    "sub": "Privacy layer for your AI agent",
     "install": "Install",
-    "docs": "Docs",
-    "github": "GitHub",
-    "persona": "Your Persona"
-  },
-  "statsBanner": {
-    "items": [
-      ["23,400+", "Installs"],
-      ["120K+", "Daily AI interactions"],
-      ["16,000+", "Skills on ClawHub"]
-    ]
-  },
-  "capabilities": {
-    "tag": "// Core Capabilities",
-    "title": "Five capabilities. One command.",
-    "flagship": "FLAGSHIP",
-    "suggested": "Suggested for you",
-    "newCount": "4 new",
-    "idleLabel": "idle",
-    "cards": [
-      ["Smart Recommendations", "Recommends Skills that actually fit you. Based on your agent role, usage patterns, and workflow evolution. Not what's trending."],
-      ["Workflow Bundles", "One-click install of proven toolchain bundles used by developers like you."],
-      ["Zombie Detection", "Surface Skills idle for 30 days that still eat your context window every session."],
-      ["Skill Persona", "Run /mapick report to generate your shareable persona card."],
-      ["Security Scoring", "36% of Skills carry prompt injection risks. Every recommendation passes a security check."]
-    ],
-    "personaName": "Midnight Shipper"
-  },
-  "trust": {
-    "tag": "// Open Source Commitment",
-    "title": "Open source · Non-profit · No data stored",
-    "body": "Open source, non-profit, and privacy are core to what Mapick is.",
-    "cards": [
-      ["Open Source", "Fully open source. Anyone can audit, fork, or contribute. No proprietary lock-in.", "View source"],
-      ["No Data Stored", "Behavior data anonymized locally. API Keys never leave your device. No data sales. Delete any time.", "Privacy policy"],
-      ["Non-Profit", "No ads. No upsells. No data sales. Built for developer productivity, not monetization.", "About us"]
-    ]
-  },
-  "footerLinks": {
-    "product": "Product",
-    "community": "Community",
-    "legal": "Legal",
-    "ecosystem": "Ecosystem",
-    "docs": "Docs",
-    "api": "API",
-    "bundles": "Bundles",
+    "features": "Features",
     "persona": "Persona",
-    "github": "GitHub",
-    "discord": "Discord",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "copyright": "© 2026 Mapick"
+    "github": "GitHub"
   },
   "hero": {
-    "badge": "Claude Code · Codex · Gemini CLI",
-    "title1": "AI Skills recommended for how you work",
-    "title2": "",
-    "desc": "Mapick learns your agent role, your stack, and how your workflow evolves. It surfaces the Skills you're actually missing. Not what's trending. A personal skill advisor that gets smarter the longer you use it.",
+    "badge": "OpenClaw v1",
+    "title1": "Every skill you install can see everything you do",
+    "shimmerWord": "skill",
+    "desc": "Mapick is a personal skill advisor with a built-in privacy layer for your OpenClaw agent. It recommends the AI skills you actually need, cleans what you don't use, and blocks what's unsafe.",
     "command": "clawhub install mapick",
-    "stats": ["30-second scan", "Works across MCP-compatible tools"],
-    "lineStrip": ["Personalized recommendations", "Reduce wasted AI spend", "Setup cleanup", "Workflow bundles", "Shareable reports"]
+    "chips": ["Privacy-first", "Smart recommendations", "Zombie cleanup"],
+    "small": "30-second install · Works in any language · Free"
   },
-  "why": {
-    "tag": "// Why Mapick",
-    "title": "Five reasons people keep coming back",
-    "body": "A personal skill advisor that gets smarter the longer you use it. Not a popularity ranking. Not a static list.",
-    "cards": [
-      ["Recommendations That Learn", "Built on four signals no leaderboard tracks: your agent role, your installed stack, your usage patterns, and how your workflow evolves. Not what's popular. What fits your gaps."],
-      ["Auto-Complete Your Workflow", "Missing a step in your toolchain? Mapick detects gaps and suggests the tools that finish the job."],
-      ["Dead Skills Detected", "Idle for 30 days? Flagged. One scan finds zombie skills, duplicate tools, and wasted context across your entire setup."],
-      ["Cut AI Spend (up to 70%)", "Unused skills waste context tokens every time they run. Clean your stack, cut the bloat, and stop paying for tools you never use."],
-      ["Security Score: A/B/C", "36% of skills have prompt injection or safety issues. Every recommendation is filtered through quality and security checks first."]
-    ]
-  },
-  "platforms": {
-    "tag": "// Works across MCP-compatible tools",
-    "title": "Any Agent. Same Mapick.",
-    "body": "The stack you just copied lives in your Mapick Key. Add this config once, and it works everywhere.",
-    "chips": ["OpenClaw", "Claude Code", "Cursor", "Codex CLI", "Windsurf", "Gemini CLI"],
-    "configTitle": "Universal MCP config",
-    "configBody": "One endpoint, one profile, one setup. Copy it once and reuse it across supported clients.",
-    "copyBtn": "Copy config"
-  },
-  "steps": {
-    "tag": "// How it works",
-    "title": "Three steps. Clear enough to use right away.",
-    "items": [
-      ["01", "Install", "Install Mapick in the tool you already use. No long setup flow.", "$ clawhub install mapick"],
-      ["02", "Learn", "Mapick tracks usage, workflow order, and setup health to understand what belongs in your stack.", ""],
-      ["03", "Improve", "Get better recommendations, cleaner setups, and clearer reports as your usage data grows.", ""]
-    ]
-  },
-  "scenarios": {
-    "tag": "// Real-World Scenarios",
-    "title": "Three people. Three ways Mapick helps.",
-    "body": "Whether you are looking for the right tool, cleaning up, or completing a workflow, Mapick gives you a clearer next step.",
+  "problem": {
+    "tag": "// The problem",
+    "title": "You probably have all three of these issues right now.",
+    "accent": "right now",
     "cards": [
       {
-        "name": "Alice",
-        "label": "Finds the right Skill faster",
-        "steps": [
-          ["Friend is using", "A tool with strong retention or workflow fit enters the candidate pool."],
-          ["Mapick recommends", "It surfaces because it fits Alice's workflow, not because it is just popular."],
-          ["One-click install", "Security and fit checks are already part of the shortlist."]
+        "icon": "lock",
+        "title": "40 skills = 40 pairs of eyes",
+        "body": "Every skill runs inside your conversation context. They legitimately read your chat history, code, API keys, and work content. Security scanning can't help: the code isn't malicious, the permissions are normal. You just don't have a privacy layer."
+      },
+      {
+        "icon": "target",
+        "title": "You're wasting hours every week",
+        "body": "You're missing 3 critical skills that would automate what you're doing manually. Not what's trending — what fits your actual workflow. You won't find them by browsing ClawHub's 59,300 skills."
+      },
+      {
+        "icon": "broom",
+        "title": "Half your skills are dead weight",
+        "body": "You followed a tutorial, installed 40 skills, and 19 of them have never been used. They bloat your context window every session and slow your agent down."
+      }
+    ]
+  },
+  "demo": {
+    "tag": "// See it in action",
+    "title": "Install and talk. That's it.",
+    "accent": "That's it.",
+    "blocks": [
+      {
+        "caption": "First conversation: tell Mapick what you do, it tells you what can be automated",
+        "lines": [
+          { "who": "you", "text": "I write code, review PRs, check CI" },
+          { "who": "mapick", "text": "Scanning your installed skills against that workflow…" },
+          { "who": "mapick", "text": "Detected 3 efficiency gaps. Reply 1 to install all." }
         ]
       },
       {
-        "name": "Bob",
-        "label": "Cleans up a noisy setup",
-        "steps": [
-          ["Idle Skills detected", "Mapick spots tools that have not been meaningfully used."],
-          ["Clear prompt", "It suggests what to keep and what to remove."],
-          ["Cleaner stack", "Fewer distractions, fewer stale tools, stronger setup health."]
+        "caption": "19 zombies found — 40% context reduction after cleanup",
+        "lines": [
+          { "who": "mapick", "text": "19 zombies (never used or 30+ days idle)" },
+          { "who": "mapick", "text": "capability-evolver  61 days, 0 calls" },
+          { "who": "mapick", "text": "self-improving-agent  61 days, 0 calls" },
+          { "who": "mapick", "text": "Clean 19 → 40% context reduction, faster responses" }
         ]
       },
       {
-        "name": "Carol",
-        "label": "Completes a workflow bundle",
-        "steps": [
-          ["Current state", "Carol already has part of a workflow installed."],
-          ["Mapick suggests gaps", "It recommends the missing tools that complete the workflow."],
-          ["Ready to use", "The result is a more complete stack without manual hunting."]
+        "caption": "Your developer persona: 1,847 calls this month, peak hours 23:00–03:00",
+        "lines": [
+          { "who": "mapick", "text": "Persona matched: 3AM Committer" },
+          { "who": "mapick", "text": "1,847 skill calls · 28 / 30 active days" },
+          { "who": "mapick", "text": "Share → s.mapick.ai/a8k2x1" }
         ]
       }
     ]
   },
-  "setups": {
-    "tag": "// Shared setups",
-    "title": "Stop guessing. Copy a proven stack.",
-    "body": "Mapick recommended these stacks based on real usage patterns. 77% of users found a new daily-use Skill in the first week.",
-    "cards": [
-      ["#001", "Full-stack Developer", "Mapick recommended 5 of 7 · 412 code reviews/mo", "Code Review · GitHub Ops · Docker · CI/CD · Summarize · Search · capability-evolver", "“Mapick found capability-evolver before I knew I needed it.”"],
-      ["#002", "Data Analyst", "Mapick recommended 6 of 9 · 89 reports generated", "Notebook · Search · Charts · Report Builder · SQL Helper · Data Clean · Summarize · Export · Scheduler", "“Mapick suggested 2 Skills I’d never searched for. Both became daily tools.”"],
-      ["#003", "Marketer", "Mapick found all 4 · 2h saved daily", "Summarize · Tavily Search · Calendar Ops · Image Lab", "“I told Mapick I’m a marketer. It built my entire stack in one scan.”"],
-      ["#004", "Student", "Mapick recommended 2 of 3 · 58 papers summarized", "Reading · Writing · Research", "“Mapick knew what a research student needs better than I did.”"]
+  "features": {
+    "tag": "// Core features",
+    "title": "Six things Mapick does.",
+    "accent": "does",
+    "items": [
+      {
+        "icon": "lock",
+        "badge": "Privacy",
+        "name": "Privacy protection",
+        "headline": "Your data gets redacted before it leaves your machine.",
+        "body": "The redaction engine (open source: scripts/redact.py) strips API keys, SSH keys, JWT tokens, database connection strings, personal IDs, and 20+ other secret patterns before any data is transmitted. Only anonymized skill IDs and timestamps leave your device.",
+        "demo": [
+          "you: Is my data safe?",
+          "",
+          "mapick: Privacy status",
+          "  Redaction engine: running (23 rules)",
+          "  Data sent: skill IDs + timestamps only",
+          "  API keys / SSH keys / IDs → [FILTERED]",
+          "  Source: scripts/redact.py"
+        ],
+        "link": "Decline anytime → /mapick privacy consent-decline"
+      },
+      {
+        "icon": "radar",
+        "badge": "Recommend",
+        "name": "Smart recommendations",
+        "headline": "Matched to your workflow, not a popularity list.",
+        "body": "Tell Mapick what you do (write code, review PRs, check CI, read logs) and it scans your installed skills against your workflow. Recommendations show why you need each skill, not just what it does. C-grade skills never appear.",
+        "demo": [
+          "mapick: Detected 3 efficiency gaps",
+          "",
+          "  1. code-review                Grade A",
+          "     82% of power GitHub users install this",
+          "  2. log-analyzer               Grade A",
+          "     matches your logs workflow",
+          "  3. ci-monitor                 Grade A",
+          "     pushes automatically, no manual checks"
+        ],
+        "link": ""
+      },
+      {
+        "icon": "broom",
+        "badge": "Cleanup",
+        "name": "Zombie cleanup",
+        "headline": "Find and remove skills you never use.",
+        "body": "Mapick scans your installed skills and flags anything with zero calls or 30+ days idle, and tells you which ones were probably installed from a tutorial and never touched. Cleaning 19 zombies typically cuts your context window by 40%.",
+        "demo": [
+          "mapick: 19 zombies found",
+          "",
+          "  1. capability-evolver     61 d · 0 calls",
+          "  2. self-improving-agent   61 d · 0 calls",
+          "  3. agent-memory-ultimate  58 d · 0 calls",
+          "     …14 more",
+          "",
+          "  Clean all → 40% context reduction"
+        ],
+        "link": ""
+      },
+      {
+        "icon": "shield",
+        "badge": "Security",
+        "name": "Security scoring",
+        "headline": "Every skill gets a grade before you install it.",
+        "body": "Four-dimension scoring: code scan (40%), permission consistency (25%), community signals (20%), VirusTotal integration (15%). A = safe. B = warning. C = blocked with alternatives shown. Also detects typosquatting — the ClawHavoc attack pattern.",
+        "demo": [
+          "you: Is super-helper safe?",
+          "",
+          "mapick: Grade B (72/100)",
+          "  Code scan: eval() found",
+          "  Permissions: network:all (only needs :api)",
+          "  Typosquatting: not detected",
+          "  A-grade alternative: safe-helper"
+        ],
+        "link": ""
+      },
+      {
+        "icon": "idcard",
+        "badge": "Persona",
+        "name": "Developer persona",
+        "headline": "13 persona types. Based on what you actually do.",
+        "body": "Mapick analyzes your usage data (which skills you use, how often, what time of day, how long your sessions run) and matches you to a developer persona. Shareable as a card with OG tags. Preview directly in WeChat, Twitter/X, Telegram.",
+        "demo": [
+          "persona: 3AM Committer",
+          "  core stack     github · docker · summarize",
+          "  skills         47 installed · 14 active",
+          "  activation     30% (below 73% of users)",
+          "  skill calls    1,847 this month",
+          "  peak hours     23:00 – 03:00",
+          "  share          s.mapick.ai/a8k2x1"
+        ],
+        "link": ""
+      },
+      {
+        "icon": "layers",
+        "badge": "Bundles",
+        "name": "Skill bundles",
+        "headline": "One command to install an entire toolchain.",
+        "body": "11 pre-built bundles matched to your persona. Shows which skills you already have and how many you're missing. Reply to install all at once.",
+        "demo": [
+          "Based on your 3AM Committer profile:",
+          "",
+          "  Full-Stack Developer (7 skills)",
+          "    github · docker-manage · code-review",
+          "    ci-monitor · log-analyzer · db-helper",
+          "    api-tester",
+          "    → have 3/7, need 4 more",
+          "",
+          "  DevOps (5 skills) — have 0/5"
+        ],
+        "link": ""
+      }
     ],
-    "cta": "Copy this setup →",
-    "note": "Different role, different stack, different fit."
+    "counterPrefix": "FEATURE",
+    "liveLabel": "Live example"
   },
-  "report": {
-    "tag": "// Reports and sharing",
-    "title": "What’s your OpenClaw persona?",
-    "body": "Mapick turns your recommendations, your usage data, and your decisions into a shareable skill card. Your story.",
-    "persona": "Midnight Shipper",
-    "match": "87% match · 13/15 work traits",
+  "persona": {
+    "tag": "// Your persona",
+    "title": "What's your OpenClaw persona?",
+    "accent": "OpenClaw",
+    "body": "Mapick turns your recommendations, your usage data, and your decisions into a shareable skill card.",
+    "name": "3AM Committer",
+    "taunt": "Debugging at 3AM. Committing code with dark circles under your eyes.",
     "profile": "OpenClaw · 67 days · Top 5%",
-    "taunt": "Your AI ships faster than your sleep schedule recovers.",
-    "quote": "I am a Midnight Shipper on OpenClaw. In 67 days, my AI stack delivered more output than my sleep schedule could defend.",
-    "recommendedBadge": "Mapick-recommended",
-    "stats": [
-      ["420K words", "Moby Dick × 2", "Real output, not vanity stats"],
-      ["380 code reviews", "2 junior devs / month", "Concrete proof people understand instantly"],
-      ["5 of 7 Skills", "Recommended by Mapick", "Recommendation is the hero of the stack"],
-      ["Core stack", "6 months of refinement", "What people actually want to copy"]
+    "match": "87% match · 13/15 work traits",
+    "coreStack": ["github", "docker", "summarize"],
+    "inventory": [
+      ["Skills", "47 installed · 14 active"],
+      ["Activation", "30%, lower than 73% of users"]
     ],
-    "skills": [
-      ["GitHub Ops", "Repository workflow · Grade A", "23/week", true],
-      ["Code Review", "AI review assistant · Grade A", "18/week", true],
-      ["Docker Management", "Container workflow · Grade A", "12/week", false],
-      ["Summarize", "Document digest · Grade A", "9/week", true]
+    "workStats": [
+      ["Skill calls", "1,847", "61/day avg"],
+      ["Active days", "28 / 30", "this month"],
+      ["Peak hours", "23:00 – 03:00", "consistent"],
+      ["Longest run", "6.5h", "Mon, Mar 17"],
+      ["Token spend", "$42.7", "12.5M tokens"],
+      ["Shadow persona", "Install First", "your inverse"]
     ],
-    "cardLink": "mapick.ai/s/3am-committer",
-    "cta": "Get my persona",
-    "shareLabel": "Share link"
+    "cardLink": "s.mapick.ai/a8k2x1",
+    "shareLabel": "Share link",
+    "cta": "Get my persona"
+  },
+  "bundles": {
+    "tag": "// Shared setups",
+    "title": "Copy a proven stack.",
+    "accent": "proven",
+    "body": "Pre-built bundles, ranked by fit. Reply with a number to install all at once.",
+    "featuredLabel": "RECOMMENDED FOR YOU",
+    "matchLabel": "Match",
+    "cta": "Copy this setup",
+    "items": [
+      { "id": "#001", "name": "Full-Stack Developer", "count": "7 skills", "stack": "github · docker-manage · code-review · ci-monitor · log-analyzer · db-helper · api-tester" },
+      { "id": "#002", "name": "DevOps", "count": "5 skills", "stack": "k8s-manager · terraform · ansible · prometheus · grafana" },
+      { "id": "#003", "name": "Data Analyst", "count": "9 skills", "stack": "notebook · search · charts · report-builder · sql-helper · data-clean · summarize · export · scheduler" },
+      { "id": "#004", "name": "Deep Research", "count": "5 skills", "stack": "arxiv · papers · summarize · reading · writing" }
+    ],
+    "list": "Full-Stack Developer · Content Creator · DevOps · Data Analyst · Deep Research · Security Audit · Second Brain · Workflow Automation · Google Workspace · Multi-Platform Comms · pnpm Monorepo"
+  },
+  "trust": {
+    "tag": "// Trust",
+    "title": "Open source. Auditable. Your data, your control.",
+    "accent": "Your data, your control",
+    "body": "Every line running on your machine is inspectable, from the scripts to the redaction rules.",
+    "openSource": {
+      "title": "Open source",
+      "body": "Everything on your machine is MIT-licensed. Read every rule, verify every command, audit every AI instruction.",
+      "bullets": [
+        "SKILL.md · all instructions plain text",
+        "shell.sh · every command inspectable",
+        "redact.py · 23 redaction rules, open",
+        "Reference docs · MIT"
+      ],
+      "verifyCmd": "# verify yourself\n$ git clone https://github.com/mapick-ai/mapick\n$ cat scripts/redact.py | head -40",
+      "link": "View source →"
+    },
+    "control": {
+      "title": "Your data, your control",
+      "collectedLabel": "Collected",
+      "notCollectedLabel": "NOT collected",
+      "collected": [
+        ["Skill IDs", "which skills you have"],
+        ["Install / uninstall timestamps", ""],
+        ["Invocation counts", ""],
+        ["Anonymized device fingerprint", ""]
+      ],
+      "notCollected": [
+        ["File contents", ""],
+        ["Conversation history", ""],
+        ["API keys or credentials", ""],
+        ["Name, email, or identity", ""]
+      ],
+      "declineCmd": "/mapick privacy consent-decline",
+      "deleteCmd": "/mapick privacy delete-all --confirm",
+      "declineLabel": "Decline anytime",
+      "deleteLabel": "Delete everything",
+      "link": "Privacy policy →"
+    }
   },
   "footer": {
-    "title": "See what your stack is actually doing",
-    "body": "30-second scan. Free forever. No credit card.",
-    "cta": "Install Mapick Free",
-    "points": ["Conversation content stays local", "Anonymous signals only", "Encrypted sync", "User-controlled sharing"],
-    "note": "Built by a team that deletes more than it installs."
+    "title": "Add a privacy layer to your AI agent.",
+    "accent": "privacy layer",
+    "body": "30-second install. Free. Open source.",
+    "points": [
+      "Conversation content stays local",
+      "Anonymous signals only",
+      "User-controlled sharing"
+    ]
+  },
+  "links": {
+    "product": "Product",
+    "community": "Community",
+    "legal": "Legal",
+    "ecosystem": "Ecosystem",
+    "productLinks": [
+      ["Docs", "https://github.com/mapick-ai/mapick#readme"],
+      ["GitHub", "https://github.com/mapick-ai/mapick"],
+      ["Persona", "#persona"]
+    ],
+    "communityLinks": [
+      ["GitHub", "https://github.com/mapick-ai/mapick"],
+      ["Discord", "https://discord.gg/gt55CgFZU5"]
+    ],
+    "legalLinks": [
+      ["Privacy", "/privacy"],
+      ["Terms", "/terms"]
+    ],
+    "ecoLinks": [
+      ["ClawHub", "https://clawhub.ai/"],
+      ["OpenClaw", "https://openclaw.ai/"]
+    ],
+    "copyLeft": "Mapick · Open source",
+    "copyRight": "github.com/mapick-ai/mapick"
   }
 }

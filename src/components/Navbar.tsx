@@ -1,17 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { copyText } from "./ui";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const tHero = useTranslations("hero");
   const [scrolled, setScrolled] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const command = tHero("command");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleInstall = useCallback(() => {
+    copyText(command);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1400);
+  }, [command]);
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
@@ -32,12 +42,25 @@ export default function Navbar() {
           </div>
         </div>
         <nav className="nav-links">
-          <a className="nav-link" href="#">{t("docs")}</a>
-          <a className="nav-link" href="https://github.com/mapick-ai/mapick-skill" target="_blank" rel="noreferrer">{t("github")}</a>
-          <a className="nav-link" href="#persona">{t("persona")}</a>
+          <a className="nav-link" href="#features">
+            {t("features")}
+          </a>
+          <a className="nav-link" href="#persona">
+            {t("persona")}
+          </a>
+          <a
+            className="nav-link"
+            href="https://github.com/mapick-ai/mapick"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("github")}
+          </a>
         </nav>
         <div className="controls">
-          <button className="cta-btn">{t("install")}</button>
+          <button className="cta-btn" onClick={handleInstall}>
+            {copied ? "Copied" : t("install")}
+          </button>
         </div>
       </div>
     </header>
