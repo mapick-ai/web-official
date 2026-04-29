@@ -67,7 +67,7 @@ Mapick 基于标准 MCP（Model Context Protocol）协议，支持所有主流 A
 |---|---|
 | Claude Code (Anthropic) | `claude mcp add mapick https://mcp.mapick.ai` |
 | Codex CLI (OpenAI) | `codex mcp add mapick https://mcp.mapick.ai` |
-| OpenClaw | `clawhub install mapick` |
+| OpenClaw | `openclaw skills install mapick` |
 | Cursor (Anysphere) | Settings → MCP → Add Server |
 | Windsurf (Codeium) | `.mcp/config.json → mcpServers` |
 | Cline | MCP Servers → Add → mapick |
@@ -95,7 +95,7 @@ Mapick 基于标准 MCP（Model Context Protocol）协议，支持所有主流 A
 
 **OpenClaw 用户：**
 ```
-clawhub install mapick
+openclaw skills install mapick
 ```
 
 **其他 Agent 平台（Claude Code / Codex / Cursor 等）：**
@@ -110,7 +110,7 @@ mcp add mapick https://mcp.mapick.ai
 将以下命令发给好友（在他们的 Agent 工具里执行一次即可）：
 ```
 # OpenClaw
-clawhub install mapick --invite=<你的邀请码>
+openclaw skills install mapick --invite=<你的邀请码>
 
 # 其他 Agent 平台
 mcp add mapick https://mcp.mapick.ai --invite=<你的邀请码>

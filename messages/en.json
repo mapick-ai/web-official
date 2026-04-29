@@ -12,7 +12,7 @@
     "title1": "Every skill you install can see everything you do",
     "shimmerWord": "skill",
     "desc": "Mapick is a personal skill advisor with a built-in privacy layer for your OpenClaw agent. It recommends the AI skills you actually need, cleans what you don't use, and blocks what's unsafe.",
-    "command": "clawhub install mapick",
+    "command": "openclaw skills install mapick",
     "chips": ["Privacy-first", "Smart recommendations", "Zombie cleanup"],
     "small": "30-second install · Works in any language · Free"
   },

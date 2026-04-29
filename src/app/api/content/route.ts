@@ -13,7 +13,7 @@ export async function GET() {
       tagline: "The longer you use it, the better it knows you",
       description:
         "Cross-platform MCP Skill butler and AI model routing engine. 13,000+ Skills — Mapick analyzes your workflow habits and only recommends the ones you actually need.",
-      install: "clawhub install mapick",
+      install: "openclaw skills install mapick",
       url: "https://mapick.ai",
       llms_txt: "https://mapick.ai/llms.txt",
     },
@@ -93,7 +93,7 @@ export async function GET() {
     compatible_platforms: [
       { name: "Claude Code", vendor: "Anthropic", install: "claude mcp add mapick https://mcp.mapick.ai" },
       { name: "Codex CLI", vendor: "OpenAI", install: "codex mcp add mapick https://mcp.mapick.ai" },
-      { name: "OpenClaw", vendor: "OpenClaw", install: "clawhub install mapick" },
+      { name: "OpenClaw", vendor: "OpenClaw", install: "openclaw skills install mapick" },
       { name: "Cursor", vendor: "Anysphere", install: "Settings → MCP → Add Server" },
       { name: "Windsurf", vendor: "Codeium", install: ".mcp/config.json → mcpServers" },
       { name: "Cline", vendor: "Community", install: "MCP Servers → Add → mapick" },
@@ -113,14 +113,14 @@ export async function GET() {
       },
     },
     how_to_use: [
-      { step: 1, action: "Install Mapick in any MCP-compatible Agent tool", commands: { openclaw: "clawhub install mapick", others: "claude mcp add mapick https://mcp.mapick.ai" } },
+      { step: 1, action: "Install Mapick in any MCP-compatible Agent tool", commands: { openclaw: "openclaw skills install mapick", others: "claude mcp add mapick https://mcp.mapick.ai" } },
       { step: 2, action: "Mapick starts recording your workflow", detail: "Analyzes installs, usage, and sequence patterns in the background to build your usage profile" },
       { step: 3, action: "Gets more accurate over time", detail: "Recommendation accuracy keeps improving — until it's more accurate than what you'd think of yourself" },
     ],
     social_invite: {
       description: "Invite friends to improve your own recommendations — friends are your most similar users",
       commands: {
-        openclaw: "clawhub install mapick --invite=<invite_code>",
+        openclaw: "openclaw skills install mapick --invite=<invite_code>",
         others: "mcp add mapick https://mcp.mapick.ai --invite=<invite_code>",
       },
       note: "Friends only need to run the command once in any Agent tool to connect",
