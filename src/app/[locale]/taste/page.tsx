@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./taste.css";
+import InstallChooser from "./InstallChooser";
 import { parseTaste, trivia } from "./parseSearchParams";
 
 const siteUrl = "https://mapick.ai";
@@ -96,9 +97,7 @@ export default async function TastePage({
         </div>
 
         <div className="taste-cta-wrap">
-          <a className="taste-cta" href="#how-it-works">
-            Test my AI taste
-          </a>
+          <InstallChooser label="Test my AI taste" />
           <div className="taste-cta-sub">
             Install Mapick on OpenClaw — takes 30 seconds
           </div>
