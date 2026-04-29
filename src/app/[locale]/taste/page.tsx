@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./taste.css";
 import { parseTaste, trivia } from "./parseSearchParams";
 
@@ -59,10 +58,6 @@ export default async function TastePage({
   return (
     <div className="taste-page">
       <div className="taste-shell">
-        <Link className="taste-back" href="/">
-          ← mapick.ai
-        </Link>
-
         <div className="taste-card">
           <div className="taste-eyebrow">My AI taste</div>
           <h1 className="taste-title">{tagText}</h1>
