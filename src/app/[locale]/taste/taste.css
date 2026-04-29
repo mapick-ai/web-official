@@ -1,0 +1,201 @@
+.taste-page {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  width: 100%;
+  background: #faf9f6;
+  color: #111;
+  font-family: var(--sans);
+  color-scheme: light;
+  padding: 32px 16px 56px;
+}
+.taste-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #faf9f6;
+  z-index: -1;
+}
+.taste-shell {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.taste-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+.taste-eyebrow {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.taste-title {
+  text-align: center;
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #111;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+.taste-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.taste-stat {
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.taste-stat .v {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.taste-stat .k {
+  font-size: 14px;
+  margin-top: 6px;
+}
+.taste-stat.s1 { background: #dde4f3; }
+.taste-stat.s1 .v { color: #1f3a8a; }
+.taste-stat.s1 .k { color: #2c4699; }
+.taste-stat.s2 { background: #dde9ce; }
+.taste-stat.s2 .v { color: #3f4e2f; }
+.taste-stat.s2 .k { color: #4d5d3a; }
+.taste-stat.s3 { background: #f2d7d7; }
+.taste-stat.s3 .v { color: #7a302d; }
+.taste-stat.s3 .k { color: #8a3c39; }
+.taste-stat.s4 { background: #eee0cc; }
+.taste-stat.s4 .v { color: #6b521a; }
+.taste-stat.s4 .k { color: #7c6024; }
+.taste-divider {
+  border-top: 1px solid #ececec;
+  margin: 4px 0 18px;
+}
+.taste-stack-label {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.taste-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.taste-pill {
+  background: #efeee7;
+  color: #111;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+.taste-trivia {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  padding: 4px 0 0;
+}
+.taste-cta-wrap {
+  margin-top: 22px;
+}
+.taste-cta {
+  display: block;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 18px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+  font-family: inherit;
+}
+.taste-cta:hover {
+  background: #222;
+}
+.taste-cta:active { transform: translateY(1px); }
+.taste-cta-sub {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.taste-howit {
+  margin-top: 36px;
+  border-top: 1px solid #ececec;
+  padding-top: 26px;
+}
+.taste-howit h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: #111;
+}
+.taste-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.taste-step {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+.taste-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #efeee7;
+  color: #444;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.taste-step-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin: 4px 0 4px;
+}
+.taste-step-body {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+.taste-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.taste-back:hover { color: #111; }
+
+@media (max-width: 480px) {
+  .taste-card { padding: 22px 18px 20px; }
+  .taste-stat { padding: 16px; }
+  .taste-stat .v { font-size: 26px; }
+}
